@@ -36,3 +36,7 @@ next start wouldn't add no additional document in solr
 1) application use mainApp 
 2) please specify port if needed in src\main\resources\application.properties file by default it is 8081
 if you will specify another port pleas change ocrApiUrl in first application respectively
+
+# web_source_code
+No need any actions this only for survey
+all web part compiled and stored in mainApp so mainApp need be run in some servlet container like Tomcat
