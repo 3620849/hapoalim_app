@@ -1,0 +1,17 @@
+.olololo{
+	width: 800px;
+	 min-width: 800px;
+}
+.di1{
+	width: 50%;
+	background-color: blue;
+
+}
+.di2{
+	background-color: red;
+	width: 50%;
+}
+.di2.di1{
+	border-color: black;
+	border : solid ;
+}

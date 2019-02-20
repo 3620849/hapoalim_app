@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <span class="nav-link">Hapoalim application</span>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+
+ 
+ <div style="margin: 20px">
+<p-panel  header="Select file and send">
+  <div class="ui-g">
+   <label style="margin-right: 50px" for="importButton">Select file: </label>
+          <p-fileUpload #form mode="basic" id="importButton" (uploadHandler)="sendImg($event, form)" customUpload="true" auto="true"  name="file"  chooseLabel="Select file" >
+  </p-fileUpload>
+</div>
+</p-panel>
+</div>
+
+<div class="ui-g">
+   <div class="ui-g-2"> </div>
+    <div class="ui-g-8"> 
+          <p-panel [style]="{width: 'auto'}" styleClass="ui-card-shadow">
+            <p-header>
+              Result
+            </p-header>
+
+            <div *ngIf="showLoadSpinner" class="ui-g">
+                <div class="ui-g-5"> </div>
+                <div class="ui-g-2">
+                  <p-progressSpinner  [style]="{width: '50px', height: '50px'}" strokeWidth="8" fill="#EEEEEE"                 animationDuration=".5s"></p-progressSpinner> 
+                </div>
+                <div class="ui-g-5"> </div>
+             </div>
+
+            <div class="ui-g">        
+                <div class="ui-g-3"> </div>
+                <div class="ui-g-6"> 
+                      <div>{{showMessage}}</div>
+                </div>
+                <div class="ui-g-3"></div>
+            </div>
+
+
+
+            <p-footer>
+              <button pButton type="button" label="Clean" (click)="clenAll()" icon="pi pi-check" style="margin-right: .25em"></button>
+            </p-footer>
+         </p-panel>
+        
+    </div>
+     <div class="ui-g-2"> </div>
+</div>
+
+ 
